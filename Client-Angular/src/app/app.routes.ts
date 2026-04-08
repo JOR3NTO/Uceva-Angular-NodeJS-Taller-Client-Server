@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { UsersPage } from './pages/users/users.page';
 import { ProductsPage } from './pages/products/products.page';
+import { OrdenesPage } from './pages/ordenes/ordenes.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -36,6 +37,8 @@ export const routes: Routes = [
    * de mostrar y gestionar el listado de productos.
    */
   { path: 'products', component: ProductsPage },
+
+  { path: 'ordenes', component: OrdenesPage },
 
   /**
    * Ruta comodín.
