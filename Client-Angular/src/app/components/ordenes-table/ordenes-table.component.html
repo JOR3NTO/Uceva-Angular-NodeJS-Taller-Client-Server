@@ -1,0 +1,27 @@
+<table class="table table-striped border">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Total</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (orden of ordenes; track orden) {
+      <tr>
+        <th scope="row">{{ orden.id }}</th>
+        <td>{{ orden.customerName }}</td>
+        <td>{{ orden.orderDate | date }}</td>
+        <td>{{ orden.totalAmount | currency }}</td>
+        <td>
+          <dsb-badge-atom
+            [text]="orden.status"
+            [type]="categoryMap[orden.status]" >
+          </dsb-badge-atom>
+        </td>
+      </tr>
+    }
+  </tbody>
+
