@@ -1,5 +1,8 @@
 import { Product } from "../interfaces/products.interface";
 
+/**
+ * Datos de ejemplo para productos usados en desarrollo y pruebas.
+ */
 export const PRODUCTS_MOCK: Product[] = [
     {
         id: 1,

@@ -1,5 +1,8 @@
 import { Orden } from "../interfaces/ordenes.interface";
 
+/**
+ * Datos de ejemplo para órdenes usados en desarrollo y tests.
+ */
 export const ORDENES_MOCK: Orden[] = [
     {
         id: 1,
