@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { UsersRoutes } from "./modules/users/users.routes";
 import { ProductsRoutes } from "./modules/products/products.routes";
+import { ReviewsRoutes } from "./modules/reviews/reviews.routes";
+import { OrdenesRoutes } from "./modules/ordenes/ordenes.routes";
 import { EmpresasRoutes } from "./modules/empresas/empresas.routes";
 
 /**
@@ -32,8 +34,10 @@ export class AppRoutes {
     // Definir rutas
     router.use("/api/users", UsersRoutes.routes);
     router.use("/api/products", ProductsRoutes.routes);
+    router.use("/api/reviews", ReviewsRoutes.routes);
     router.use("/api/empresas", EmpresasRoutes.routes);
 
+    router.use("/api/ordenes", OrdenesRoutes.routes);
     return router;
   }
 }

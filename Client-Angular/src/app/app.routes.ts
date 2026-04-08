@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { UsersPage } from './pages/users/users.page';
 import { ProductsPage } from './pages/products/products.page';
+import { ReviewsPage } from './pages/reviews/reviews.page';
+import { OrdenesPage } from './pages/ordenes/ordenes.page';
 import { EmpresasPage } from './pages/empresas/empresas.page';
 
 /**
@@ -38,6 +40,10 @@ export const routes: Routes = [
    */
   { path: 'products', component: ProductsPage },
 
+  {path: 'reviews', component: ReviewsPage},
+
+  { path: 'ordenes', component: OrdenesPage },
+
 
 
   { path: 'empresas', component: EmpresasPage },
@@ -51,3 +57,5 @@ export const routes: Routes = [
    */
   { path: '**', redirectTo: 'users' },
 ];
+
+
