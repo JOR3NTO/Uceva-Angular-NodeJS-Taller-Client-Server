@@ -12,6 +12,13 @@ import { ReviewsService } from '../../services/reviews/reviews.service';
 })
 export class ReviewsPage {
 
+  /**
+   * Página que muestra un listado de reseñas.
+   *
+   * Se encarga de solicitar las reseñas al `ReviewsService` y pasar
+   * los datos al componente `ReviewsTableComponent`.
+   */
+
   reviews: Review[] = [];
 
   state: State = 'init';

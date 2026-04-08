@@ -10,6 +10,12 @@ export class ReviewsService {
 
   private httpClient = inject(HttpClient);
 
+  /**
+   * Obtiene un listado de reseñas desde la API.
+   *
+   * @param countReviews Número de reseñas a solicitar.
+   * @returns Observable que emite un array de `Review`.
+   */
   getAllReviews(countReviews: number): Observable<Review[]> {
     return this.httpClient.get<Review[]>(`api/reviews/${countReviews}`);
   }

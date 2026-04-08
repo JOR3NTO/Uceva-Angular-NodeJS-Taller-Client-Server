@@ -9,6 +9,7 @@ import { Review } from '../../interfaces/reviews.interface';
 })
 export class ReviewsTableComponent {
 
+  /** Array de reseñas que se muestran en la tabla. */
   @Input() reviews: Review[] = [];
 
 }
