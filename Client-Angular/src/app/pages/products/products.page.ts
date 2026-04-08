@@ -34,7 +34,7 @@ export class ProductsPage {
      * @default 'init'
      */
     state: State = 'init';
-  
+
 
   /**
    * Servicio para obtener productos.

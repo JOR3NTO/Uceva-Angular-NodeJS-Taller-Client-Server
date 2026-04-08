@@ -3,6 +3,7 @@ import { UsersPage } from './pages/users/users.page';
 import { ProductsPage } from './pages/products/products.page';
 import { ReviewsPage } from './pages/reviews/reviews.page';
 import { OrdenesPage } from './pages/ordenes/ordenes.page';
+import { EmpresasPage } from './pages/empresas/empresas.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -43,6 +44,10 @@ export const routes: Routes = [
 
   { path: 'ordenes', component: OrdenesPage },
 
+
+
+  { path: 'empresas', component: EmpresasPage },
+
   /**
    * Ruta comodín.
    *
@@ -52,4 +57,5 @@ export const routes: Routes = [
    */
   { path: '**', redirectTo: 'users' },
 ];
+
 
