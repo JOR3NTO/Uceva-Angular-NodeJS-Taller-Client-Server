@@ -1,0 +1,23 @@
+<table class="table table-striped border">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Producto Id</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Calificación</th>
+      <th scope="col">Comentario</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (review of reviews; track review) {
+      <tr>
+        <th scope="row">{{ review.id }}</th>
+        <td>{{ review.productId }}</td>
+        <td>{{ review.userName }}</td>
+        <td>{{ review.rating }}</td>
+        <td>{{ review.comment }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
