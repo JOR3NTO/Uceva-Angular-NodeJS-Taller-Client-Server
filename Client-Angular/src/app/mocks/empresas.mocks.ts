@@ -1,5 +1,6 @@
 import { Empresa } from "../interfaces/empresas.interface";
 
+/** Mock de ejemplo para pruebas y documentación. */
 export const EMPRESAS_MOCK: Empresa[] = [
     {
         id: 1,
