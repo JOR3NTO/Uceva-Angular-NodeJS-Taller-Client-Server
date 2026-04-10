@@ -100,3 +100,26 @@ export {};
  *           type: string
  *           example: "Buen producto, recomendable"
  */
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Orden:
+ *       type: object
+ *       description: Representa una orden de compra
+ *       required:
+ *         - id
+ *         - total
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 123
+ *         total:
+ *           type: number
+ *           example: 25900
+ *         products:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Product'
+ */
