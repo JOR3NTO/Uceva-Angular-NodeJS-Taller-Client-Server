@@ -1,5 +1,9 @@
 import { Review } from "../interfaces/reviews.interface";
 
+/**
+ * Conjunto de reseñas de ejemplo (mock) utilizado en pruebas y demos.
+ * Se exporta como `REVIEWS_MOCK` para ser consumido por servicios y tests.
+ */
 export const REVIEWS_MOCK: Review[] = [
     {
         id: 1,

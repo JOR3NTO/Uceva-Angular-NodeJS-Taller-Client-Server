@@ -3,10 +3,18 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Review } from '../../interfaces/reviews.interface';
 
+/**
+ * Servicio que expone operaciones para obtener reseñas desde la API.
+ */
+
 @Injectable({
   providedIn: 'root',
 })
 export class ReviewsService {
+
+  /**
+   * Servicio que expone operaciones para obtener reseñas desde la API.
+   */
 
   private httpClient = inject(HttpClient);
 
