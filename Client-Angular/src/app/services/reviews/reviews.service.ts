@@ -8,6 +8,10 @@ import { Review } from '../../interfaces/reviews.interface';
 })
 export class ReviewsService {
 
+  /**
+   * Servicio que expone operaciones para obtener reseñas desde la API.
+   */
+
   private httpClient = inject(HttpClient);
 
   /**

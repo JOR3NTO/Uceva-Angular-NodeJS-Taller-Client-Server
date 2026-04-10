@@ -14,17 +14,22 @@ export class ReviewsPage {
 
   /**
    * Página que muestra un listado de reseñas.
-   *
    * Se encarga de solicitar las reseñas al `ReviewsService` y pasar
    * los datos al componente `ReviewsTableComponent`.
    */
 
+  /** Lista de reseñas mostradas en la vista */
   reviews: Review[] = [];
 
+  /** Estado de la página (`init` | `loading` | `success` | `error`) */
   state: State = 'init';
 
+  /** Servicio para obtener reseñas */
   private reviewsService = inject(ReviewsService);
 
+  /**
+   * Inicializa la página: solicita reseñas y actualiza el estado.
+   */
   ngOnInit(): void {
     this.state = 'loading';
     this.reviewsService.getAllReviews(10).subscribe({

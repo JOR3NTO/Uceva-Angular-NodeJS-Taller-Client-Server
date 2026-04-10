@@ -9,7 +9,11 @@ import { Review } from '../../interfaces/reviews.interface';
 })
 export class ReviewsTableComponent {
 
-  /** Array de reseñas que se muestran en la tabla. */
+  /**
+   * Componente que renderiza una tabla/listado de reseñas.
+   *
+   * Recibe via `@Input()` el array de `Review` que debe mostrar.
+   */
   @Input() reviews: Review[] = [];
 
 }
