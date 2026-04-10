@@ -8,10 +8,29 @@ export class EmpresasRoutes {
 
   
     /**
-     * Ruta para obtener N empresas generadas por el servicio.
-     * @route GET /api/empresas/:countEmpresas
-     * @param countEmpresas Número de empresas a generar (obtenido de los parámetros de la ruta)
-     * @returns Lista de empresas generadas en formato JSON
+     * @openapi
+     * /api/empresas/{countEmpresas}:
+     *   get:
+     *     tags:
+     *       - Empresas
+     *     summary: Obtener N empresas generadas
+     *     parameters:
+     *       - name: countEmpresas
+     *         in: path
+     *         required: true
+     *         schema:
+     *           type: integer
+     *     responses:
+     *       '200':
+     *         description: Lista de empresas
+     *         content:
+     *           application/json:
+     *             schema:
+     *               type: array
+     *               items:
+     *                 $ref: '#/components/schemas/Empresa'
+     *       '500':
+     *         description: Error del servidor
      */
     router.get("/:countEmpresas", controller.getAllEmpresas);
 

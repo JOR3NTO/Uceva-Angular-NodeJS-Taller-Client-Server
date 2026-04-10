@@ -123,3 +123,26 @@ export {};
  *           items:
  *             $ref: '#/components/schemas/Product'
  */
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Empresa:
+ *       type: object
+ *       description: Representa una empresa generada
+ *       required:
+ *         - id
+ *         - name
+ *         - address
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 1
+ *         name:
+ *           type: string
+ *           example: Acme S.A.
+ *         address:
+ *           type: string
+ *           example: Calle Falsa 123
+ */
