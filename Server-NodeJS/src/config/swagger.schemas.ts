@@ -72,3 +72,31 @@
  *           example: 4500
  */
 export {};
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Review:
+ *       type: object
+ *       description: Representa una reseña generada
+ *       required:
+ *         - id
+ *         - productId
+ *         - rating
+ *         - comment
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 1
+ *         productId:
+ *           type: integer
+ *           example: 10
+ *         rating:
+ *           type: number
+ *           format: float
+ *           example: 4.5
+ *         comment:
+ *           type: string
+ *           example: "Buen producto, recomendable"
+ */
