@@ -5,6 +5,11 @@ import { State } from '../../interfaces/state.interface';
 import { Review } from '../../interfaces/reviews.interface';
 import { ReviewsService } from '../../services/reviews/reviews.service';
 
+/**
+ * Página que muestra un listado de reseñas.
+ * Se encarga de solicitar las reseñas al `ReviewsService` y pasar
+ * los datos al componente `ReviewsTableComponent`.
+ */
 @Component({
   selector: 'app-reviews',
   imports: [ReviewsTableComponent, AlertComponent],
