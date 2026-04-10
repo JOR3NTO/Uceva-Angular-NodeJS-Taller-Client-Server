@@ -77,6 +77,57 @@ export {};
  * @openapi
  * components:
  *   schemas:
+ *     Review:
+ *       type: object
+ *       description: Representa una reseña generada
+ *       required:
+ *         - id
+ *         - productId
+ *         - rating
+ *         - comment
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 1
+ *         productId:
+ *           type: integer
+ *           example: 10
+ *         rating:
+ *           type: number
+ *           format: float
+ *           example: 4.5
+ *         comment:
+ *           type: string
+ *           example: "Buen producto, recomendable"
+ */
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Orden:
+ *       type: object
+ *       description: Representa una orden de compra
+ *       required:
+ *         - id
+ *         - total
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 123
+ *         total:
+ *           type: number
+ *           example: 25900
+ *         products:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Product'
+ */
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
  *     Empresa:
  *       type: object
  *       description: Representa una empresa generada
