@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ORDENES_MOCK } from '../../mocks/ordenes.mocks';
@@ -46,11 +46,12 @@ describe('OrdenesTableComponent', () => {
       const columns = row.queryAll(By.css('th, td'));
       const orden = component.ordenes[index];
       const orderDate = new DatePipe('en-US').transform(orden.orderDate);
+      const totalAmount = new CurrencyPipe('en-US').transform(orden.totalAmount);
 
       expect(columns[0].nativeElement.textContent.trim()).toBe(String(orden.id));
       expect(columns[1].nativeElement.textContent.trim()).toBe(orden.customerName);
       expect(columns[2].nativeElement.textContent.trim()).toBe(orderDate);
-      expect(columns[3].nativeElement.textContent.trim()).toBe(String(orden.totalAmount));
+      expect(columns[3].nativeElement.textContent.trim()).toBe(totalAmount);
     });
   });
 
@@ -59,28 +60,5 @@ describe('OrdenesTableComponent', () => {
     expect(component.categoryMap['En Proceso']).toBe('primary');
     expect(component.categoryMap['Completada']).toBe('success');
     expect(component.categoryMap['Cancelada']).toBe('danger');
-  });
-});
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { OrdenesTableComponent } from './ordenes-table.component';
-
-describe('OrdenesTableComponent', () => {
-  let component: OrdenesTableComponent;
-  let fixture: ComponentFixture<OrdenesTableComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [OrdenesTableComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(OrdenesTableComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });
